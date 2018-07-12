@@ -47,7 +47,7 @@ $container = get_theme_mod('understrap_container_type');
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <h6>Donk Buying Guide</h6>
+                        <h6>Car Buying Guide</h6>
                         <ul>
                             <li><a href="/">Picking the Best Airplane</a></li>
                             <li><a href="/">Picking the Best Airplane</a></li>
