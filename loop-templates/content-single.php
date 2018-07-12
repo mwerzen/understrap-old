@@ -8,6 +8,14 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+    <nav aria-label="breadcrumb">
+        <ol id="breadcrumb" class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Blog</a></li>
+            <li class="breadcrumb-item"><a href="#"><?php the_category(' '); ?></a></li>
+            <li class="breadcrumb-item"><a href="#"><?php the_title(); ?></a></li>
+        </ol>
+    </nav>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -17,7 +25,6 @@
 			<?php understrap_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
-
 	</header><!-- .entry-header -->
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>

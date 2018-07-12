@@ -2,5 +2,34 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
+//Aqua Green and Tan Scheme
+$color-s1-lightblue: #58898d;
+$color-s1-lighttan: #ab8f79;
+$color-s1-darkblue: #164c4e;
+$color-s1-darktan: #ff9666;
 
-$primary: #6f31cd; // Thats a sample how you could change a BootStrap variable.
+//Blue Scheme,
+$color-s2-darkpurple: #2c4870;
+$color-s2-lightpurple: #4b5d77;
+$color-s2-darkyellow: #9F680C;
+$color-s2-lightyellow: #b59a6b;
+
+$tc-primary:        $color-s2-darkpurple;
+$tc-primary-light:  $color-s2-lightpurple;
+$tc-accent:         $color-s2-lightpurple;
+$tc-accent-light:   $color-s2-lightpurple;
+
+
+$primary: $tc-primary;
+$secondary: $tc-accent;
+
+
+$breadcrumb-divider: quote(">");
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Condensed|Roboto+Slab');
+
+$font-headline: 'Roboto Slab', serif;
+$font-body: 'Open Sans', sans-serif;
+$font-accent: 'Roboto Condensed', sans-serif;

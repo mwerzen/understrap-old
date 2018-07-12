@@ -55,20 +55,20 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Right Sidebar', 'understrap' ),
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_widget' => '<div class="card sidebar-card">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="widget-title card-header">',
+			'after_title'   => '</h3><div class="card-body">',
 		) );
 
 		register_sidebar( array(
 			'name'          => __( 'Left Sidebar', 'understrap' ),
 			'id'            => 'left-sidebar',
 			'description'   => 'Left sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+            'before_widget' => '<div class="card sidebar-card">',
+            'after_widget'  => '</div></div>',
+            'before_title'  => '<h3 class="widget-title card-header">',
+            'after_title'   => '</h3><div class="card-body">',
 		) );
 
 		register_sidebar( array(
@@ -82,19 +82,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Hero Canvas', 'understrap' ),
-			'id'            => 'herocanvas',
-			'description'   => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '',
-			'after_title'   => '',
-		) );
-
-		register_sidebar( array(
-			'name'          => __( 'Top Full', 'understrap' ),
+			'name'          => __( 'Hero Static', 'understrap' ),
 			'id'            => 'statichero',
-			'description'   => 'Full top widget with dynmic grid',
+			'description'   => 'Static Hero widget. no slider functionallity',
 		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
 		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 
@@ -104,7 +94,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		register_sidebar( array(
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
-			'description'   => 'Full sized footer widget with dynamic grid',
+			'description'   => 'Widget area below main content and above footer',
 		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
 		    'after_widget'   => '</div><!-- .footer-widget -->', 
 		    'before_title'   => '<h3 class="widget-title">', 

@@ -8,44 +8,73 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php get_sidebar('footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+    <div class="<?php echo esc_attr($container); ?>">
 
-		<div class="row">
+        <footer class="footer site-footer" id="colophon">
 
-			<div class="col-md-12">
+            <div class="site-info">
 
-				<footer class="site-footer" id="colophon">
+                <div class="row" id="footer-links">
+                    <div class="col-md-3">
+                        <h6>Airplane Buying Guide</h6>
+                        <ul>
+                            <li><a href="/sample-page/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Waterski Buying Guide</h6>
+                        <ul>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Jetpack Buying Guide</h6>
+                        <ul>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Donk Buying Guide</h6>
+                        <ul>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                            <li><a href="/">Picking the Best Airplane</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-					<div class="site-info">
+                <div class="row" id="footer-legal">
+                    <div class="col-md-4" id="footer-copy">
+                        Copyright © by Mike Werzen <?php the_time('Y'); ?>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" id="footer-policies">
+                        <a href>Disclaimer</a> &bull;
+                        <a href>Privacy Policy</a> &bull;
+                        <a href>Terms of Service</a>
+                    </div>
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
+                </div>
 
-				</footer><!-- #colophon -->
+            </div><!-- .site-info -->
 
-			</div><!--col end -->
+        </footer><!-- #colophon -->
+    </div>
 
-		</div><!-- row end -->
-
-	</div><!-- container end -->
+</div><!-- container end -->
 
 </div><!-- wrapper end -->
 

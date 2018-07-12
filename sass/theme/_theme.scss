@@ -1,1 +1,317 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+a {
+  color: $tc-primary;
+
+  &:hover {
+    color: $tc-primary-light;
+  }
+}
+
+#single-wrapper {
+  padding-top: 1rem;
+}
+
+
+#topbar {
+  background-color: $tc-primary-light !important;
+  font-family: $font-headline;
+
+  a {
+    color: rgba(255, 255, 255, .7);
+    // change a on hover example
+    // in CSS this was selected by nav a:hover
+    &:hover {
+      color: rgba(255, 255, 255, .5);
+    }
+  }
+
+  .active {
+    a {
+      color: #ffffff !important;
+    }
+  }
+
+}
+
+#wrapper-footer {
+
+  background-color: $tc-primary-light;
+  font-family: $font-body;
+
+  #footer-links {
+
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+      font-weight: bold;
+      font-family: $font-headline;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-size: .8rem;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: lightgrey;
+      }
+    }
+
+  }
+
+  #footer-legal {
+    border-top: 1px solid $tc-primary;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: .8rem;
+    color: lightgrey;
+
+    a {
+      color: lightgrey;
+    }
+  }
+}
+
+#right-sidebar, #left-sidebar {
+  padding-left: 2rem;
+
+  //margin-top: 5rem;
+
+  .sidebar-card {
+    margin-bottom: 1.25rem;
+    //moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    //-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    //box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+
+    border: none;
+
+
+    #searchform {
+      label {
+        display: none !important;
+      }
+
+      #searchsubmit {
+        background-color: $tc-primary-light;
+        border-color: $tc-primary;
+      }
+
+      #s:focus {
+        box-shadow: none;
+        webkit-box-shadow: none;
+      }
+    }
+
+    h3 {
+      background-color: rgba(0, 0, 0, .03);
+      padding: .4rem 1.25rem .3rem;
+      font-family: $font-headline;
+      font-size: 1.25rem;
+      font-weight: bold;
+
+      &.widget-title {
+        color: $tc-primary;
+      }
+    }
+
+    .card-header {
+      background-color: white;
+    }
+
+    .card-body {
+      padding: .75rem 1.25rem .75rem;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+#primary {
+  border-right: 1px solid #ececec;
+
+  #breadcrumb {
+    padding: 0 0 0 0;
+    margin-bottom: 0rem;
+    background-color: white;
+    font-family: $font-accent;
+    color: grey;
+
+    a {
+      color: grey;
+    }
+
+    > li + li:before {
+      content: ">"
+    }
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: $font-headline;
+    font-weight: bold;
+    color: $tc-primary;
+  }
+
+  .entry-title {
+    border-bottom: 1px solid #ececec;
+    margin-top: .34rem;
+    margin-bottom: 0px;
+  }
+
+  .entry-meta {
+    margin-bottom: 1.5rem;
+    font-family: $font-accent;
+    font-style: italic;
+    font-size: .9rem;
+    color: grey;
+
+    a {
+      color: grey;
+    }
+  }
+
+  p {
+    font-family: $font-body;
+  }
+
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  h5 {
+
+  }
+
+  h6 {
+
+  }
+
+  article {
+    margin-bottom: 1.25rem;
+    //border-bottom: 1px dotted #ececec;
+  }
+
+  figure, p img, .wp-post-image {
+    padding: 2px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+
+    figcaption {
+      font-family: $font-headline;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}
+
+#comments {
+  margin-top: 2rem;
+
+  ol {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: .35rem;
+  }
+
+  li {
+    //box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+    //border-radius: .25rem;
+    //background-clip: border-box;
+
+    padding-left: 1.25rem;
+
+    article {
+      margin-bottom: 1rem;
+      border-bottom: none;
+    }
+
+    .avatar {
+      display: none !important;
+    }
+
+    .comment-meta {
+      .comment-author {
+        color: black;
+        font-size: 1.25rem;
+
+        .says {
+          display: none !important;
+        }
+      }
+
+      .comment-metadata {
+        font-size: .75rem;
+        color: $tc-primary-light;
+        margin-bottom: 1rem;
+      }
+    }
+
+    //&.depth-1, .depth-2, .depth-3, .depth-4 {
+    .comment-body {
+      border-radius: .75rem;
+      margin-right: .35rem;
+      margin-bottom: .35rem;
+      padding-left: 1rem;
+
+      border-left: 3px solid #dbdaec;
+      border-bottom: 1px solid #dbdaec;
+
+      background-color: rgba(0, 0, 0, 0.025);
+      border-color: rgba(0, 0, 0, 0.1);
+
+      padding: .5rem 1rem .5rem 1rem;
+
+      .reply {
+        text-align: right;
+
+      }
+
+    }
+  }
+
+  #respond {
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0rem;
+    }
+
+    .form-submit {
+      text-align: center;
+
+      #submit {
+        background-color: $tc-primary-light;
+        border-color: $tc-primary-light;
+
+        &:hover {
+          background-color: $tc-primary;
+          border-color: $tc-primary;
+        }
+      }
+    }
+
+  }
+
+}

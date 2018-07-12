@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav id="topbar" class="navbar navbar-expand-md navbar-dark bg-dark">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
@@ -40,18 +40,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
-
 						<?php if ( is_front_page() && is_home() ) : ?>
-
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
 						<?php else : ?>
-
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
 						<?php endif; ?>
-
-
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
@@ -64,19 +57,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
+						'container_class' => 'collapse navbar-collapse navbar-right',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
+						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
 
-		</nav><!-- .site-navigation -->
 
+
+		</nav><!-- .site-navigation -->
 	</div><!-- #wrapper-navbar end -->
