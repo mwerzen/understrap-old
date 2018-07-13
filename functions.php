@@ -69,3 +69,6 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+// Adds shortcode functionality to ACF text areas
+add_filter('acf/format_value/type=text', 'do_shortcode');
