@@ -180,6 +180,8 @@ a {
 
   p {
     font-family: $font-body;
+    font-size: 1.15rem;
+    line-height: 1.6rem;
   }
 
   h1 {
@@ -227,6 +229,11 @@ a {
 
 #comments {
   margin-top: 2rem;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
   ol {
     list-style-type: none;

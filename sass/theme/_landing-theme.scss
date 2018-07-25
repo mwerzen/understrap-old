@@ -90,6 +90,9 @@
 
     p {
       font-family: $font-body;
+      font-size: 1.15rem;
+      line-height: 1.6rem;
+
     }
 
     .landing-background {
@@ -216,7 +219,7 @@
     }
 
     .testimonial-text {
-      font-size: .9rem;
+      font-size: .9rem !important;
     }
 
     .testimonial-rating {

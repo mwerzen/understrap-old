@@ -13,7 +13,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <?php get_sidebar('footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="footer wrapper navbar-fixed-bottom" id="wrapper-footer">
 
     <div class="<?php echo esc_attr($container); ?>">
 
@@ -60,11 +60,12 @@ $container = get_theme_mod('understrap_container_type');
                     <div class="col-md-4" id="footer-copy">
                         Copyright © by Mike Werzen <?php the_time('Y'); ?>
                     </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4" id="footer-policies">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5" id="footer-policies">
                         <a href>Disclaimer</a> &bull;
+                        <a href>Cookie Policy</a> &bull;
                         <a href>Privacy Policy</a> &bull;
-                        <a href>Terms of Service</a>
+                        <a href>Terms and Conditions</a>
                     </div>
 
                 </div>
